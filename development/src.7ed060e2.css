@@ -33,7 +33,7 @@ button {
   margin: 0;
 }
 
-input[type="text"] {
+input[type=text] {
   width: 300px;
 }
 
@@ -52,12 +52,10 @@ input[type="text"] {
   border-bottom-right-radius: 4px;
 }
 
-@media (max-width: 800px) {
-}
-@media (max-width: 700px) {
-}
 @media (max-width: 500px) {
-  input[type="text"] {
+  input[type=text] {
     width: 100%;
   }
 }
+
+/*# sourceMappingURL=/src.7ed060e2.css.map */

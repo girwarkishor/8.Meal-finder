@@ -4,7 +4,8 @@
   "description": "\"# 8.Meal-finder\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel public/index.html --out-dir development -p 3000",
+    "build": "parcel build public/index.html --out-dir dist --public-url ./"
   },
   "repository": {
     "type": "git",
