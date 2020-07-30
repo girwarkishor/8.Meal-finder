@@ -1220,6 +1220,21 @@ function getMealById(mealID) {
     var meal = data.meals[0];
     addMealToDOM(meal);
   });
+} // Fetch random meal from api
+
+
+function getRandomMeal() {
+  // Clear meals and heading
+  mealsEl.innerHTML = "";
+  resultHeading.innerHTML = "";
+  fetch("https://www.themealdb.com/api/json/v1/1/random.php").then(function (res) {
+    return res.json();
+  }).then(function (data) {
+    //   console.log(data);
+    var meal = data.meals[0]; //   console.log(meal);
+
+    addMealToDOM(meal);
+  });
 } // Add Meal to DOM
 
 
@@ -1238,13 +1253,14 @@ function addMealToDOM(meal) {
     }
   }
 
-  single_mealEl.innerHTML = (0, _concat.default)(_context6 = (0, _concat.default)(_context7 = (0, _concat.default)(_context8 = (0, _concat.default)(_context9 = (0, _concat.default)(_context10 = (0, _concat.default)(_context11 = "\n  <div class=\"single-meal\">\n    <h1>".concat(meal.strMeal, "</h1>\n    <img src=\"")).call(_context11, meal.strMealThumb, "\" alt=\"")).call(_context10, meal.strMeal, "\" />\n    <div class=\"single-meal-info>\n        ")).call(_context9, meal.strCategory ? "<p>".concat(meal.strCategory, "</p>") : "", "\n        ")).call(_context8, meal.strArea ? "<p>".concat(meal.strArea, "</p>") : "", "\n    </div>\n    <div class=\"main\">\n        <p>")).call(_context7, meal.strInstructions, "</p>\n        <h2>Ingredients</h2>\n        <ul>\n            ")).call(_context6, (0, _map.default)(ingredients).call(ingredients, function (ing) {
+  single_mealEl.innerHTML = (0, _concat.default)(_context6 = (0, _concat.default)(_context7 = (0, _concat.default)(_context8 = (0, _concat.default)(_context9 = (0, _concat.default)(_context10 = (0, _concat.default)(_context11 = "\n  <div class=\"single-meal\">\n    <h1>".concat(meal.strMeal, "</h1>\n    <img src=\"")).call(_context11, meal.strMealThumb, "\" alt=\"")).call(_context10, meal.strMeal, "\" />\n    <div class=\"single-meal-info\">\n        ")).call(_context9, meal.strCategory ? "<p>".concat(meal.strCategory, "</p>") : "", "\n        ")).call(_context8, meal.strArea ? "<p>".concat(meal.strArea, "</p>") : "", "\n    </div>\n    <div class=\"main\">\n        <p>")).call(_context7, meal.strInstructions, "</p>\n        <h2>Ingredients</h2>\n        <ul>\n            ")).call(_context6, (0, _map.default)(ingredients).call(ingredients, function (ing) {
     return "<li>".concat(ing, "</li>");
   }).join(""), "\n        </ul>\n    </div>\n  </div>\n  ");
 } // Event Listeners
 
 
 submit.addEventListener("submit", searchMeal);
+random.addEventListener("click", getRandomMeal);
 mealsEl.addEventListener("click", function (e) {
   var _context12;
 
