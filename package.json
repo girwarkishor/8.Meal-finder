@@ -1,0 +1,25 @@
+{
+  "name": "meal-finder",
+  "version": "1.0.0",
+  "description": "\"# 8.Meal-finder\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/girwarkishor/8.Meal-finder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/girwarkishor/8.Meal-finder/issues"
+  },
+  "homepage": "https://github.com/girwarkishor/8.Meal-finder#readme",
+  "dependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.10.5",
+    "@babel/runtime-corejs3": "^7.10.5",
+    "sass": "^1.26.10"
+  }
+}
